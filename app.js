@@ -25,7 +25,7 @@ app.set('view engine','html');
 app.engine('html', require('ejs').renderFile);
 
 app.get("/",(req,res)=>{
-    res.sendFile(path.join(__dirname +'/views/home.html'));
+    res.render("home.html")
 })
 
 app.post("/seller",(req,res)=>{
